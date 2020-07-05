@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+function env_sync() {
+
+	_parent_dir=$(pwd -P)
+
+	pip-sync ${_parent_dir}/dev_requirements.txt $@
+}

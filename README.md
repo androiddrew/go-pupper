@@ -8,5 +8,5 @@ you should use the `env_sync` function provided by `scripts/profile`.
 
 ```
 source scripts/profile
-env_sync service/app/requirements.txt
+env_sync ./services/app/requirements.txt
 ```

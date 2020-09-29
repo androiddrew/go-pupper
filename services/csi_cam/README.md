@@ -2,6 +2,22 @@
 
 A service to provide a ffmpeg video stream over IP from a CSI camera.
 
+## Option 1 U4VL 
+
+Works well on raspberry pi
+
+Installation instructions
+
+1. Copy apt-key to key manager `curl http://www.linux-projects.org/listing/uv4l_repo/lpkey.asc | sudo apt-key add-`
+2. Add the stretch repo to `/etc/apt/sources.list` (even if you are using Buster) `deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/stretch stretch main`
+3. Install the required packages `sudo apt-get update` then `sudo apt-get install uv4l uv4l-server uv4l-raspicam`
+4. Run the uv4l server. Example command: `uv4l --driver raspicam --auto-video_nr --encoding h264 --width 1280 --height 720 --enable-server on`
+5. View the output in a browser at `http://<hostname or ip>:8080/stream`
+
+To close out the running service just run `pkill uv4l`
+
+## Option 2 Roll your own that works on Pi and Jetson.
+
 ## Requirements
 
 **Note** if you want to check the contents of a .deb package before installing it use the commands

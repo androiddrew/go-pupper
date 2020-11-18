@@ -1,6 +1,10 @@
 # go-pupper
 Software for the Pupper robot
 
+## Features
+
+Dashboard used for configuring and monitoring your pupper via a web browser.
+
 ## Development
 
 Each service will have it's own dependencies. To prevent having to build multiple virtualenvs to develop each service 
